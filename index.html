@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Selector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Select Your Favorite Fruit</h1>
+      <select name="fruits" id="fruits" onchange="Change()">
+        <option value="0">Select a fruit</option>
+        <option value="1">Apple</option>
+        <option value="2">Mango</option>
+        <option value="3">Grapes</option>
+        <option value="4">Orange</option>
+        <option value="5">Banana</option>
+      </select>
+      <img src="" alt="Choose any fruit" id="fruitImage" />
+      <p>Choose a fruit to see its image displayed here.</p>
+    </div>
+
+    <script>
+      function Change() {
+        var myfruits = document.getElementById("fruits").value;
+        var myimgElemt = document.getElementById("fruitImage");
+
+        switch (myfruits) {
+          case "1":
+            myimgElemt.src = "images/apple.webp";
+            myimgElemt.alt = "Apple";
+            break;
+          case "2":
+            myimgElemt.src = "images/mango.jpeg";
+            myimgElemt.alt = "Mango";
+            break;
+          case "3":
+            myimgElemt.src = "images/grapes.jpeg";
+            myimgElemt.alt = "Grapes";
+            break;
+          case "4":
+            myimgElemt.src = "images/orange.webp";
+            myimgElemt.alt = "Orange";
+            break;
+          case "5":
+            myimgElemt.src = "images/banana.webp";
+            myimgElemt.alt = "Banana";
+            break;
+          default:
+            myimgElemt.src = "";
+            myimgElemt.alt = "Choose any fruit";
+        }
+      }
+    </script>
+  </body>
+</html>
